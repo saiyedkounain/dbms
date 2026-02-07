@@ -64,7 +64,8 @@ and course_ in (
 	select course_ from bookAdp
     group by course_
     having count(*) >= 2
-);
+)
+order by bookTitle ASC;
 
 -- 3. List any department that has all its adopted books published by a specific publisher.
 -- trick dept IN() and NOT IN()
