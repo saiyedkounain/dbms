@@ -110,6 +110,9 @@ where driver_name = 'Smith';
 # do it yourself : just add owns and participated 
 
 #4. Delete the Mazda belonging to “Smith”. 
+	-- careful u might have to do this
+	SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 0;
 Delete from car
 where model = 'Mazda' AND reg_no in (
 	select reg_no from owns join person using (driver_id)
