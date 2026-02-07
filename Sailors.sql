@@ -89,7 +89,7 @@ where not exists (
 );
 #5. Name and age of sailor who is the oldest
 select s.sname, s.age from sailor s
-order by s.age
+order by s.age desc
 limit 1;
 
 # 6. For each boat that is reserved by 5 sailors of age >= 40, find i.boat id ii.avg age of sailors
